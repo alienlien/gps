@@ -1,2 +1,2 @@
 # gps
-General Process Sharing
+A simulation for General Process Sharing(GPS) algorithm
