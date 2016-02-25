@@ -48,13 +48,6 @@ class GPSQueue():
         return self.__unicode__()
 
 
-def get_queue_names(capacity, param):
-    """
-    It returns the names of the queues to dequeue.
-    """
-    return []
-
-
 if __name__ == '__main__':
     s = Scheduler(capacity=1)
     q_1 = NetQueue(rate=0.7)
