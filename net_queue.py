@@ -9,13 +9,13 @@ class NetQueue(queue.Queue):
     def __init__(self, id="", rate=0.0):
         self.rate = rate
         if id == "":
-            self.id = uuid.uuid4()
+            self.ID = uuid.uuid4()
         super(NetQueue, self).__init__()
 
     def __unicode__(self):
-        max_size = q.maxsize if q.maxsize > 0 else 'Infinity'
+        max_size = self.maxsize if self.maxsize > 0 else 'Infinity'
         return '[ID: {id}, Rate: {rate}, Size: {size}, Max: {max_size}]' \
-            .format(id=self.id, rate=self.rate,
+            .format(id=self.ID, rate=self.rate,
                 size=self.qsize(), max_size=max_size)
 
     def __str__(self):
